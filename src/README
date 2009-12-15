@@ -1,0 +1,16 @@
+build under linux
+
+gcc adjujda.c level/leveling.c level/level-xml.c level/level-compute.c  base/base.c -o adjujda -std=gnu99 -lm -lxml2 -I /usr/include/libxml2/ -g
+
+./adjujda ../data/level/level-inp.xml ../data/level/level-outp.xml 
+
+
+build under windows
+
+decompress gtk-dev.7z to c:\ then add add 2 dictionaries c:\glade3 and c:\gtk+-bundle_2.16.6-20091013_win32
+decompress MingW.7z to C:\ then add 1 dictionary c:\MingW
+
+modify everiment varity  Path  to add C:\Glade3\bin;C:\MinGW\bin
+modify everiment varity  LIBRARY_PATH to add C:\MinGW\lib;C:\gtk+-bundle_2.16.6-20091013_win32\lib;C:\Glade3\lib
+modify everiment varity  C_INCLUDEDE_PATH to add C:\MinGW\include;C:\Glade3\include;C:\gtk+-bundle_2.16.6-20091013_win32\include
+modify everiment varity  PKG_CONFIG_PATH to add C:\Glade3\lib\pkgconfig;C:\gtk+-bundle_2.16.6-20091013_win32\lib\pkgconfig

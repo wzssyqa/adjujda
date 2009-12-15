@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE gama-local SYSTEM "http://www.gnu.org/software/gama/gama-local.dtd">
+
+<gama-local network="leveling">
+
+<network s0="5.0"></network>
+<description>haha this is description</description>
+<points-observations>
+<coordinates>
+	<point id="A" z="35.4180"/>
+	<point id="B" z="45.7120"/>
+	<point id="C" z="25.2700"/>
+	<point id="D" z="24.6780"/>
+</coordinates>
+
+<height-differences>
+	<dh from="A" to="E" val="8.2280" dist="4000" />
+	<dh from="E" to="B" val="2.0600" dist="4000" />
+	<dh from="E" to="F" val="1.5150" dist="2000" />
+	<dh from="G" to="F" val="7.4770" dist="4000" />
+	<dh from="C" to="G" val="12.4170" dist="2000" />
+	<dh from="D" to="G" val="13.0000" dist="2000" />
+</height-differences>
+</points-observations>
+</gama-local>

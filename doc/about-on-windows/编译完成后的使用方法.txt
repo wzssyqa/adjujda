@@ -1,0 +1,36 @@
+例如，将 adjujda.exe 放在了 C:\ 中 ，原始数据文件为 C:\input.xml
+
+1. 按 win+r 快捷键，输入cmd，然后运行 cd C:\
+2. 输入 adjujda.exe input.xml output.xml 如果一切正常，将会产生 C:\output.xml
+	注意，如果已经有了同名文件，将不加警告的覆盖！！！
+
+文件的格式
+
+1.水准测量的格式
+文件是一个 XML 文件（必须使用UTF-8编码！！）
+其根节点为 <gama-local network="leveling"><gama-local>
+所有的长度单位都是 米。
+根节点有三个子节点
+A .<network s0="xxx" snoop="yes/no" closure="yes/no" alpha="fff" sigma="ffff"></network>
+	xxx 表示一米的线路长度的权
+	snoop="xx" 表示平差时是否进行粗差探测，如果探测到粗差，平差值的权将显示为0.
+	closure="yes/no" 表示平差前是否校验闭合差（尚未实现）
+	fff 表示粗差探测时的显著水平。
+	ffff 表示验前单位权中误差
+B. <description>xxx<description>
+	其中的xxx是对此网的描述
+C. <points-observations></points-observations>
+	有两个子元素
+	a.<coordinates></coordinates> 
+		使用<point id="xxx" z="fff"/> 表示已知点
+	b.<height-differences></height-differences>
+		使用<dh from="fid" to="toid" val="vfff" dist="dfff" /> 表示水准观测
+水准的输出文件基本和输入文件相同，只是
+<point /> 元素增加了 stdev （中误差）属性
+<dh /> 元素增加了 weight （权）属性
+
+2.GPS 文件的格式
+尚未实现
+3.平面网文件的格式
+尚未实现
+	

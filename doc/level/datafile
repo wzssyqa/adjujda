@@ -1,0 +1,45 @@
+leveling input file
+
+This is an XML file that have a root element of
+<gama-local network="leveling"><gama-local>
+the network prop show that this network is a 
+leveling network
+
+PLEASE USE UTF-8 ENCODE!
+
+the root element have 3 subelement.
+
+1.<network s0="xxx" snoop="yes/no" closure="yes/no" alpha="fff" sigma="ffff"></network>
+xxx is a number which is the weight of 1 meter.
+snoop :snooping the network?if first char is y,do it
+esle not do it.
+closure :before adjuestment ,compute closure?not implement yet
+
+2.<description>xxx<description>
+xxx is anything that descript this network.
+
+3.<points-observations></points-observations>
+this element contains the points and observations.
+it have 2 subelement.
+a.	<coordinates></coordinates>
+this contains all knowned points,in fellow format
+<point id="xxx" z="fff"/>
+the xxx is points id,it must more than 16 chars.
+fff is the point's leveling.
+b.	<height-differences></height-differences>
+this element contains the leveling observations. 
+they are in fellow format
+<dh from="fid" to="toid" val="vfff" dist="dfff" />
+fid is id of tart point.
+toid is id of end point.
+val is the hight difference of the 2 points,in meter.
+dfff is dist of the 2 points,also in meter
+
+
+leveling output file
+
+This is an XML file ,too.
+it just the same with the input file,except that:
+1.<point /> element has a stdev prop.
+it is the stdev of the point.
+2.<dh /> element has a weight prop and stdev prop.

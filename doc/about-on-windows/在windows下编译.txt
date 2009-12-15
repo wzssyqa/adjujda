@@ -1,0 +1,10 @@
+1. 将 三个 压缩包 全部复制到 C：盘根目录
+2. 解压三个压缩文件，解压时，选择，解压到此处（当前文件夹）！！！
+3. 双击运行 install.bat
+3. 按 win+r 快捷键，输入 cmd 然后按回车
+4. 在命令行上输入 cd ../../.. 回车
+5. 输入 cd adjujda/src 回车
+6. 输入 pkg-config --cflags libxml-2.0 回车，记下输出的内容，应该为 -IC:/Glade3/include/libxml2
+7. 输入 gcc adjujda.c level/leveling.c level/level-xml.c level/level-compute.c base/base.c -o adjujda -std=gnu99 -lm -lxml2 -IC:/Glade3/include/libxml2 -static
+8. 如果没有输出东西，则说明编译完成，在src文件夹下，会有一个adjujda.exe文件
+9. 这样就可以把这个文件复制到任何地方使用了。

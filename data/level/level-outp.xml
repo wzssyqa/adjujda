@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gama-local>
+  <network s0="5.000000"/>
+  <description>haha this is description</description>
+  <points-observations>
+    <coordinates>
+      <point id="A" z="35.418000" stdev="inf"/>
+      <point id="B" z="45.712000" stdev="inf"/>
+      <point id="C" z="25.270000" stdev="inf"/>
+      <point id="D" z="24.678000" stdev="inf"/>
+      <point id="E" z="36.640000" stdev="inf"/>
+      <point id="F" z="45.155000" stdev="inf"/>
+      <point id="G" z="37.678000" stdev="inf"/>
+    </coordinates>
+    <height-differences>
+      <dh from="A" to="E" val="1.222000" weight="0.000000" stdev="inf"/>
+      <dh from="E" to="B" val="9.072000" weight="0.000000" stdev="inf"/>
+      <dh from="E" to="F" val="8.515000" weight="0.002500" stdev="inf"/>
+      <dh from="G" to="F" val="7.477000" weight="0.001250" stdev="inf"/>
+      <dh from="C" to="G" val="12.408000" weight="0.000000" stdev="inf"/>
+      <dh from="D" to="G" val="13.000000" weight="0.002500" stdev="inf"/>
+    </height-differences>
+  </points-observations>
+</gama-local>

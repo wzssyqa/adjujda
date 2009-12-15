@@ -1,0 +1,8 @@
+install mingw
+install libxml2
+set all needed Environment Variables
+
+Compile it with
+gcc adjujda.c level/leveling.c level/level-xml.c level/level-compute.c base/base.c -o adjujda -std=gnu99 -lm -lxml2 -IC:/Glade3/include/libxml2 -static
+
+please replace C:/Glade3/include/libxml2 with your libxml2 header file path.
